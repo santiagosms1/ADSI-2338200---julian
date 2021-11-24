@@ -1,0 +1,25 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace While
+{
+    class ejercicio_05
+    {
+        static void Maint(string[] args)
+        {
+            Console.WriteLine("Ejercicio 05");
+            /*Calcular la suma siguiente:
+            100 + 98 + 96 + 94 + . . . + 0 en este orden*/
+            int num1=100,resul=0;
+            while (num1 >= 0)
+            {
+                resul = resul + num1;
+                num1 -= 2;
+            }
+            Console.WriteLine("el total es: " + resul);
+        }
+    }
+}
