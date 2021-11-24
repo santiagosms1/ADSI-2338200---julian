@@ -1,0 +1,39 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace WHILE
+{
+    class WHILE8
+    {
+
+
+        static void Main(string[] args)
+        {
+			/*Encontrar el mayor valor de un conjunto de n números dados.*/
+
+			int i = 1, x;
+			double numeros_datos, numero_mayor = 0;
+			bool validar;
+
+			Console.WriteLine("Ingrese una cantidad de numeros :");
+			validar = int.TryParse(Console.ReadLine(), out x);
+
+			while (i <= x)
+			{
+
+				Console.WriteLine("Ingrese los valores :" + i);
+				validar = double.TryParse(Console.ReadLine(), out numeros_datos);
+
+				if (numeros_datos > numero_mayor)
+				{
+					numero_mayor = numeros_datos;
+				}
+				i++;
+			}
+			Console.WriteLine("El mayor valor es :" + numero_mayor);
+
+
+		}
+    }
+}

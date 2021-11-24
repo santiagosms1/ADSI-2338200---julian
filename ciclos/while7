@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace WHILE
+{
+    class WHILE7
+    {
+
+        static void Main(string[] args)
+        {
+
+			/*Encontrar el menor valor de un conjunto de n números dados.*/
+			int i = 1, num;
+			double usuario, menor = 300000;
+			bool validar;
+			Console.WriteLine("¿Cuantos valores desea ingresar");
+			validar = int.TryParse(Console.ReadLine(), out num);
+			while (i <= num)
+			{
+				Console.WriteLine("Ingrese un valor " + i);
+				validar = double.TryParse(Console.ReadLine(), out usuario);
+				if (usuario < menor)
+				{
+					menor = usuario;
+				}
+				i++;
+			}
+			Console.WriteLine("El menor numero es: " + menor);
+
+
+
+		}
+    }
+}

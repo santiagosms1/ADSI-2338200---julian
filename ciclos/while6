@@ -1,0 +1,55 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace WHILE
+{
+    class WHILE6
+    {
+
+        static void Main(string[] args)
+        {
+            /*Calcular el promedio de edades de hombres, mujeres y de todo un grupo de n alumnos
+             */
+            int alumnos, i = 1, hombres = 0, mujeres = 0, edad;
+            double suma = 0, promedioC, promedioH, promedioM, edadpormedioH = 0, edadpromedioM = 0;
+            string genero = "m", cadena, minuscula;
+            Console.WriteLine("Digite el numero de alumnos");
+            int.TryParse(Console.ReadLine(), out alumnos);
+            while (i <= alumnos)
+            {
+                Console.WriteLine("Si el genero del alumno #" + i + " es masculino oprima la tecla (m), y si es femenino oprima(f)");
+                cadena = Console.ReadLine();
+                minuscula = cadena.ToLower();
+                bool respuesta = genero.Equals(minuscula);
+                Console.WriteLine("Ingrese la edad de el alumno #" + i);
+                int.TryParse(Console.ReadLine(), out edad);
+                if (respuesta)
+                {
+                    edadpormedioH += edad;
+                    hombres++;
+                }
+                else
+                {
+                    edadpromedioM += edad;
+                    mujeres++;
+                }
+                suma += edad;
+                i++;
+            }
+
+            promedioC = suma / alumnos;
+            promedioH = edadpormedioH / hombres;
+            promedioM = edadpromedioM / mujeres;
+            Console.WriteLine("el promedio de edades  de toda la clase es: " + promedioC);
+            Console.WriteLine("Promedio de edad de hombres " + promedioH);
+            Console.WriteLine("Promedio de edad de mujeres " + promedioM);
+        
+
+
+
+
+
+    }
+    }
+}
