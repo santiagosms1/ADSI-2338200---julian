@@ -6,7 +6,7 @@ namespace While
 {
     class Ejercicio03
     {
-        static void Main(string[] args)
+        static void MainTemporal(string[] args)
         {
             Console.WriteLine("Hello World!");
 
@@ -14,16 +14,16 @@ namespace While
             suponiendo que los datos son extraídos alumno por alumno.
              */
 
-            double hombres = 0, mujeres = 0, alumnos, sexo;
+            double hombres = 0, mujeres = 0, alumnos, sexo, contador = 1;
             string nombre;
             Console.WriteLine("DIgite el numero total de alumnos");
             alumnos = double.Parse(Console.ReadLine());
 
-            for (int i = 1; i <= alumnos; i++)
+            while (contador <= alumnos)
             {
-                Console.WriteLine(" escribir nombre del alumno " + i);
+                Console.WriteLine("Nombre del alumno " + contador);
                 nombre = Console.ReadLine();
-                Console.WriteLine("genero del alumno ");
+                Console.WriteLine("Sexo del alumno ");
                 Console.WriteLine("1. Hombre");
                 Console.WriteLine("2. Mujer");
                 sexo = double.Parse(Console.ReadLine());
@@ -32,7 +32,7 @@ namespace While
                 {
                     Console.WriteLine("\n");
                     Console.WriteLine("ERROR");
-                    Console.WriteLine("genero del alumno ");
+                    Console.WriteLine("Sexo del alumno ");
                     Console.WriteLine("1. Hombre");
                     Console.WriteLine("2. Mujer");
                     sexo = double.Parse(Console.ReadLine());
@@ -45,6 +45,7 @@ namespace While
                 {
                     mujeres = mujeres + 1;
                 }
+                contador++;
             }
 
             Console.WriteLine("Hay " + hombres + " Hombres");

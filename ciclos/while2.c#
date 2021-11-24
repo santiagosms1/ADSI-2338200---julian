@@ -15,14 +15,14 @@ namespace While
                 Si el obrero trabaja 40 horas o menos se le paga $20 por hora
                 Si trabaja más de 40 horas se le paga $20 por cada una de las primeras 40 horas y $25 por cada hora
                 extra. */
-            double valorhora = 20, totalPagar;
+            double valorhora = 20, totalPagar, contador = 1;
 
-            Console.WriteLine("escriba el número de obreros");
+            Console.WriteLine("Digite el número de obreros");
             _ = int.TryParse(Console.ReadLine(), out int obreros);
 
-            for (int i = 1; i <= obreros; i++)
+            while (contador <= obreros)
             {
-                Console.WriteLine("escriba el número de horas que trabajó");
+                Console.WriteLine("Digite el número de horas que trabajó");
                 _ = int.TryParse(Console.ReadLine(), out int horastrabajo);
 
                 if (horastrabajo > 40)
@@ -35,9 +35,10 @@ namespace While
                 }
                 while (horastrabajo < 0)
                 {
-                    Console.WriteLine("El trabajador no trabajo");
+                    Console.WriteLine("El empleado no trabajó");
                 }
-                Console.WriteLine("El total a pagar al trabajador es de " + totalPagar + "$");
+                Console.WriteLine("El total a pagar al empleado es de " + totalPagar + "$");
+                contador++;
             }
 
 

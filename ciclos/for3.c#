@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,18 +8,18 @@ namespace For
     {
         static void MainTemporal(string[] args)
         {
-            Console.WriteLine("Hello World!");
-            /3. Leer 20 números e imprimir cuantos son positivos, cuantos negativos y cuantos cero./
+            
+            //3. Leer 20 números e imprimir cuantos son positivos, cuantos negativos y cuantos cero./
 
-            int Nums;
-            double NumPos = 0, NumNeg = 0, Ceros = 0;
+            double Nums;
+            int NumPos = 0, NumNeg = 0, Ceros = 0;
 
             Console.WriteLine("escriba números Reales");
 
             for(int i=1; i<=5; i++)
             {
                 Console.WriteLine("Número " + i);
-                Nums = int.Parse(Console.ReadLine());
+                Nums = double.Parse(Console.ReadLine());
                 if (Nums > 0)
                 {
                     NumPos = NumPos + 1;

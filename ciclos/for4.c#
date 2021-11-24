@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -8,7 +8,7 @@ namespace While
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+    
 
             /* 4. El Depto. de Seguridad Publica y Transito del D.F. desea saber, de los n autos que entran a la ciudad
             de México, cuantos entran con calcomanía de cada color. Conociendo el último dígito de la placa de
@@ -21,10 +21,11 @@ namespace While
             7 o 8  verde
             9 o 0  azul */
             string  color;
-            double placa, automoviles;
+            int placa, automoviles;
 
             Console.WriteLine("escriba el número de automoviles");
-            automoviles = double.Parse(Console.ReadLine());
+            //automoviles = double.Parse(Console.ReadLine());
+               _ = init.tryparse(console.readline(), out automoviles);
             while (automoviles < 0 )
             {
                 Console.WriteLine("Error, no se aceptan números negativos");
@@ -32,13 +33,13 @@ namespace While
             for (int i = 1; i <= automoviles; i++)
             {
                 Console.WriteLine("escriba el último número de la placa del automovil " + i);
-                placa = double.Parse(Console.ReadLine());
+                placa = int.Parse(Console.ReadLine());
                 while (placa < 0 || placa > 9)
                 {
                     Console.WriteLine("\n");
                     Console.WriteLine("Error, el numero de placa es  incorrecta, debe ser de un digito");
                     Console.WriteLine("escriba el último número de la placa del automovil " + i);
-                    placa = double.Parse(Console.ReadLine());
+                    placa = int.Parse(Console.ReadLine());
                     Console.WriteLine("\n");
                     
                 }

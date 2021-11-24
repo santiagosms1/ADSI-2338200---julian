@@ -2,7 +2,7 @@ using System;
 
 namespace While
 {
-    class Program
+    class Ejercicio01
     {
         static void MainTemporal(string[] args)
         {
@@ -15,14 +15,14 @@ namespace While
             sueldo base y sus comisiones */
 
             string empleado;
-            double sueldo, ventas, comisionPorVen, totalpagar, NumEmpleados;
+            double sueldo, ventas, comisionPorVen, totalpagar, NumEmpleados, contador = 1;
 
             Console.WriteLine("Compañia de seguros FlowersCorp");
 
             Console.WriteLine("Digite el numero de empledos");
             NumEmpleados = double.Parse(Console.ReadLine());
 
-            for (int i = 1; i <= NumEmpleados; i++)
+            while (contador <= NumEmpleados)
             {
                 Console.WriteLine("Nombre del empleado " + i);
                 empleado = Console.ReadLine();
@@ -31,17 +31,18 @@ namespace While
                 
                 while (sueldo < 0)
                 {
-                    Console.WriteLine("escriba el valor total de las 12 ventas de este mes");
-                    ventas = double.Parse(Console.ReadLine());
-                    comisionPorVen = (ventas * 10) / 100;
-                    totalpagar = (comisionPorVen + sueldo);
-                    Console.WriteLine("trabajador(a) " + trabajador);
-                    Console.WriteLine("obtuvo un sueldo neto de " + sueldo);
-                    Console.WriteLine("Vendió " + ventas + " en producots o srvicios");
-                    Console.WriteLine("obtuvo unas comisiones de " + comisionPorVen);
-                    Console.WriteLine(" total a pagar de " + totalpagar);
+                    Console.WriteLine("No es empleado de FlowersCorp");
                 }
-
+                Console.WriteLine("Digite el valor total de las 12 ventas de este mes");
+                ventas = double.Parse(Console.ReadLine());
+                comisionPorVen = (ventas * 10) / 100;
+                totalpagar = (comisionPorsVen + sueldo);
+                Console.WriteLine("Empleado(a) " + empleado);
+                Console.WriteLine("Tuvo un sueldo neto de " + sueldo);
+                Console.WriteLine("Vendió " + ventas + " en producots o srvicios");
+                Console.WriteLine("Tuvo unas comisiones de " + comisionPorVen);
+                Console.WriteLine("Para un total a pagar de " + totalpagar);
+                contador++;
             }
         }
     }

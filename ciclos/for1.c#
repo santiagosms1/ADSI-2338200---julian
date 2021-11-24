@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 
 namespace For
 {
@@ -6,7 +6,7 @@ namespace For
     {
         static void MainTemporal(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            
             /*1. Calcular el promedio de un alumno que tiene 7 calificaciones 
             en la materia de Diseño Estructurado de Algoritmos*/
             Console.WriteLine("-----------------");
